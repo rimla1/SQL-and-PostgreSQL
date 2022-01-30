@@ -10,8 +10,14 @@ class UserRepo {
         return toCamelCase(rows);
     }
 
-    static async findById() {
+    static async findById(id) {
+        const { rows } = await pool.query(`
+        SELECT * FROM users WHERE id = ${id};
+        `);
 
+
+
+        return toCamelCase(rows)[0];
     }
 
     static async insert() {
