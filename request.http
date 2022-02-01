@@ -19,3 +19,8 @@ content-type: application/json
     "username": "RefaRumble",
     "bio": "Best jungler EU"
 }
+
+### 
+
+DELETE http://localhost:3005/users/1 HTTP/1.1
+content-type: application/json
