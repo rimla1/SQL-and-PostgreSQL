@@ -1,4 +1,4 @@
-http://localhost:3005/users/3
+http://localhost:3005/users
 
 ###
 
@@ -8,4 +8,14 @@ content-type: application/json
 {
     "username": "SerIF",
     "bio": "EGO DRAVEN 1V9 MACHINE"
+}
+
+### 
+
+PUT http://localhost:3005/users/1 HTTP/1.1
+content-type: application/json
+
+{
+    "username": "RefaRumble",
+    "bio": "Best jungler EU"
 }

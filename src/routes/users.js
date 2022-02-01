@@ -31,6 +31,16 @@ router.post('/users', async (req, res) => {
 });
 
 router.put('/users/:id', async (req, res) => {
+    const { id } = req.params;
+    const { username, bio } = req.body;
+
+    const user = await UserRepo.update(id, username, bio);
+
+    if(user) {
+        res.send(user);
+    } else {
+        res.sendStatus(404)
+    }
 
 });
 
